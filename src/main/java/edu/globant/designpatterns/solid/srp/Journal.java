@@ -1,6 +1,9 @@
 package edu.globant.designpatterns.solid.srp;
 
 
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,5 +38,21 @@ public class Journal {
     @Override
     public String toString() {
         return String.join(System.lineSeparator(), entries);
+    }
+
+    /*Ahora vamos a agregar funcionalidades que no son directamente relacionados
+    * al concepto <Journal>, como persistir el contenido en algun lugar*/
+    public void save(String fileName) throws FileNotFoundException {
+        try (PrintStream out = new PrintStream(fileName)) {
+            out.println(toString());
+        }
+    }
+
+    public void load(String fileName) {
+        //write the Implementation here
+    }
+
+    public void load(URL url) {
+        //write the Implementation here
     }
 }
