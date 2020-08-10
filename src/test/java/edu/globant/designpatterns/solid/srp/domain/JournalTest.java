@@ -1,5 +1,6 @@
-package edu.globant.designpatterns.solid.srp;
+package edu.globant.designpatterns.solid.srp.domain;
 
+import edu.globant.designpatterns.solid.srp.domain.Journal;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
